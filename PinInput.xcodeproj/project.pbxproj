@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		B32E078C28980D8C0045641C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E078B28980D8C0045641C /* AppDelegate.swift */; };
 		B32E078E28980D8C0045641C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E078D28980D8C0045641C /* SceneDelegate.swift */; };
-		B32E079028980D8C0045641C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E078F28980D8C0045641C /* ViewController.swift */; };
-		B32E079328980D8C0045641C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32E079128980D8C0045641C /* Main.storyboard */; };
+		B32E079028980D8C0045641C /* NumberPadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E078F28980D8C0045641C /* NumberPadVC.swift */; };
 		B32E079528980D940045641C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32E079428980D940045641C /* Assets.xcassets */; };
 		B32E079828980D940045641C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32E079628980D940045641C /* LaunchScreen.storyboard */; };
+		B32E07A028980DDE0045641C /* NumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E079F28980DDE0045641C /* NumberButton.swift */; };
+		B32E07A2289943EA0045641C /* PinInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E07A1289943E90045641C /* PinInputVC.swift */; };
+		B32E07A6289971CA0045641C /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E07A5289971CA0045641C /* Passcode.swift */; };
+		B32E07A82899738D0045641C /* PasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E07A72899738D0045641C /* PasscodeVC.swift */; };
+		B32E07AA289977ED0045641C /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E07A9289977ED0045641C /* Pin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B32E078828980D8C0045641C /* PinInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32E078B28980D8C0045641C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32E078D28980D8C0045641C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B32E078F28980D8C0045641C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B32E079228980D8C0045641C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B32E078F28980D8C0045641C /* NumberPadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadVC.swift; sourceTree = "<group>"; };
 		B32E079428980D940045641C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32E079728980D940045641C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32E079928980D940045641C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32E079F28980DDE0045641C /* NumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButton.swift; sourceTree = "<group>"; };
+		B32E07A1289943E90045641C /* PinInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinInputVC.swift; sourceTree = "<group>"; };
+		B32E07A5289971CA0045641C /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
+		B32E07A72899738D0045641C /* PasscodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeVC.swift; sourceTree = "<group>"; };
+		B32E07A9289977ED0045641C /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +66,12 @@
 			children = (
 				B32E078B28980D8C0045641C /* AppDelegate.swift */,
 				B32E078D28980D8C0045641C /* SceneDelegate.swift */,
-				B32E078F28980D8C0045641C /* ViewController.swift */,
-				B32E079128980D8C0045641C /* Main.storyboard */,
+				B32E078F28980D8C0045641C /* NumberPadVC.swift */,
+				B32E07A5289971CA0045641C /* Passcode.swift */,
+				B32E07A9289977ED0045641C /* Pin.swift */,
+				B32E07A72899738D0045641C /* PasscodeVC.swift */,
+				B32E07A1289943E90045641C /* PinInputVC.swift */,
+				B32E079F28980DDE0045641C /* NumberButton.swift */,
 				B32E079428980D940045641C /* Assets.xcassets */,
 				B32E079628980D940045641C /* LaunchScreen.storyboard */,
 				B32E079928980D940045641C /* Info.plist */,
@@ -127,7 +139,6 @@
 			files = (
 				B32E079828980D940045641C /* LaunchScreen.storyboard in Resources */,
 				B32E079528980D940045641C /* Assets.xcassets in Resources */,
-				B32E079328980D8C0045641C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32E079028980D8C0045641C /* ViewController.swift in Sources */,
+				B32E079028980D8C0045641C /* NumberPadVC.swift in Sources */,
+				B32E07A6289971CA0045641C /* Passcode.swift in Sources */,
 				B32E078C28980D8C0045641C /* AppDelegate.swift in Sources */,
+				B32E07AA289977ED0045641C /* Pin.swift in Sources */,
+				B32E07A028980DDE0045641C /* NumberButton.swift in Sources */,
+				B32E07A2289943EA0045641C /* PinInputVC.swift in Sources */,
+				B32E07A82899738D0045641C /* PasscodeVC.swift in Sources */,
 				B32E078E28980D8C0045641C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B32E079128980D8C0045641C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B32E079228980D8C0045641C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B32E079628980D940045641C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +300,6 @@
 				INFOPLIST_FILE = PinInput/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +327,6 @@
 				INFOPLIST_FILE = PinInput/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
