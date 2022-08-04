@@ -7,23 +7,42 @@
 
 import UIKit
 
-class PinInputVC: UIViewController {
+
+class PinInputVC: UIViewController, NumberPadDelegate {
+   
+    func onNumberSelected(number: String) {
+        
+        if number == "<" {
+            passcodeInput.passcode.code.removeLast()
+        }
+        else{
+        passcodeInput.passcode.code += number
+        print(passcodeInput.passcode.code)
+        }
+    
+    }
+    
     
     let welcomeEmoji = UIImageView()
     let goodMorning = UILabel()
     let createPinPrompt = UILabel()
-    let pinInput = UIView()
-    let numberPad = UIView()
+    let pinInputView = UIView()
+    lazy var numberPad = NumberPadVC()
+    lazy var passcodeInput = PasscodeVC()
+    let numberPadView = UIView()
     let forgotPinLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 0.97, green: 0.95, blue: 0.94, alpha: 1.00)
         configureUI()
+        
+        numberPad.delegate = self
        
-        self.add(childVC: PasscodeVC(), to: pinInput)
-        self.add(childVC: NumberPadVC(), to: numberPad)
+        self.add(childVC: passcodeInput, to: pinInputView)
+        self.add(childVC: numberPad, to: numberPadView)
     }
+    
     
     func add(childVC: UIViewController, to containerView: UIView){
         addChild(childVC)
@@ -37,8 +56,8 @@ class PinInputVC: UIViewController {
         view.addSubview(welcomeEmoji)
         view.addSubview(goodMorning)
         view.addSubview(createPinPrompt)
-        view.addSubview(pinInput)
-        view.addSubview(numberPad)
+        view.addSubview(pinInputView)
+        view.addSubview(numberPadView)
         view.addSubview(forgotPinLabel)
         
         welcomeEmoji.image = UIImage(named: "waving-hand")
@@ -59,8 +78,8 @@ class PinInputVC: UIViewController {
         welcomeEmoji.translatesAutoresizingMaskIntoConstraints = false
         goodMorning.translatesAutoresizingMaskIntoConstraints = false
         createPinPrompt.translatesAutoresizingMaskIntoConstraints = false
-        pinInput.translatesAutoresizingMaskIntoConstraints = false
-        numberPad.translatesAutoresizingMaskIntoConstraints = false
+        pinInputView.translatesAutoresizingMaskIntoConstraints = false
+        numberPadView.translatesAutoresizingMaskIntoConstraints = false
         forgotPinLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -77,17 +96,17 @@ class PinInputVC: UIViewController {
             createPinPrompt.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             createPinPrompt.heightAnchor.constraint(equalToConstant: 18),
             
-            pinInput.topAnchor.constraint(equalTo: createPinPrompt.bottomAnchor),
-            pinInput.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
-            pinInput.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80),
-            pinInput.heightAnchor.constraint(equalToConstant: 44),
+            pinInputView.topAnchor.constraint(equalTo: createPinPrompt.bottomAnchor),
+            pinInputView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
+            pinInputView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80),
+            pinInputView.heightAnchor.constraint(equalToConstant: 44),
             
-            numberPad.topAnchor.constraint(equalTo: pinInput.bottomAnchor, constant: 10),
-            numberPad.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            numberPad.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            numberPad.heightAnchor.constraint(equalToConstant: 350),
+            numberPadView.topAnchor.constraint(equalTo: pinInputView.bottomAnchor, constant: 10),
+            numberPadView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            numberPadView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            numberPadView.heightAnchor.constraint(equalToConstant: 350),
             
-            forgotPinLabel.topAnchor.constraint(equalTo: numberPad.bottomAnchor, constant: 50),
+            forgotPinLabel.topAnchor.constraint(equalTo: numberPadView.bottomAnchor, constant: 50),
             forgotPinLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             forgotPinLabel.heightAnchor.constraint(equalToConstant: 40),
         ])

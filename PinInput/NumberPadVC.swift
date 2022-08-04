@@ -7,12 +7,23 @@
 
 import UIKit
 
+protocol NumberPadDelegate{
+    func onNumberSelected(number: String)
+}
 
-class NumberPadVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+
+class NumberPadVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
+    
+    var delegate: NumberPadDelegate?
     
     let numbers = ["1", "2", "3", "4", "5","6", "7", "8", "9", "", "0", "<"]
-    
     let background = UIColor(red: 0.97, green: 0.95, blue: 0.94, alpha: 1.00)
+   
+    var number: String = ""{
+        didSet{
+            
+        }
+    }
     
     let imageView : UIImageView = {
         let iv = UIImageView()
@@ -24,6 +35,8 @@ class NumberPadVC: UICollectionViewController, UICollectionViewDelegateFlowLayou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       collectionView.delegate = self
+        collectionView.dataSource = self
         self.collectionView.backgroundColor = background
         collectionView.register(NumberButton.self, forCellWithReuseIdentifier: NumberButton.reuseID)
         self.collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -76,5 +89,15 @@ class NumberPadVC: UICollectionViewController, UICollectionViewDelegateFlowLayou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let sidePadding = view.frame.width * 0.15
         return .init(top: 16, left: sidePadding, bottom: 16, right: sidePadding)
+        
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            
+            number = numbers[indexPath.item]
+            delegate?.onNumberSelected(number: number)
+
+        }
 }
+
+

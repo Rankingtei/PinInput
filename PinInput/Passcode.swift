@@ -4,50 +4,33 @@
 //
 //  Created by Tei Akpotosu-Nartey on 8/2/22.
 
+
 import UIKit
 
+
 class Passcode: UIView, UITextInputTraits {
-    var keyboardType: UIKeyboardType = .numberPad
+
     
     var didFinishedEnterCode:((String)-> Void)?
     
+
     var code: String = "" {
         didSet {
-            updateStack(by: code)
-            if code.count == maxLength, let didFinishedEnterCode = didFinishedEnterCode {
-                self.resignFirstResponder()
-                didFinishedEnterCode(code)
-            }
+           updateStack(by: code)
+
         }
     }
     var maxLength = 4
-    
     
     let stack = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-        showKeyboardIfNeeded()
+
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    override var canBecomeFirstResponder: Bool {
-        return true
-    }
-    
-    
-    private func showKeyboardIfNeeded() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showKeyboard))
-        self.addGestureRecognizer(tapGesture)
-    }
-    
-    
-    @objc private func showKeyboard() {
-        self.becomeFirstResponder()
     }
     
     
@@ -98,28 +81,7 @@ class Passcode: UIView, UITextInputTraits {
 
 }
 
-extension Passcode: UIKeyInput {
-    var hasText: Bool {
-        return code.count > 0
-    }
-    func insertText(_ text: String) {
-        if code.count == maxLength {
-            return
-        }
-        code.append(contentsOf: text)
-        print(code)
-    }
-    
-    func deleteBackward() {
-        if hasText {
-            code.removeLast()
-        }
-        print(code)
-    }
-}
-
 extension UIStackView {
-    
     func removeAllArrangedSubviews() {
         
         let removedSubviews = arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
@@ -127,10 +89,8 @@ extension UIStackView {
             return allSubviews + [subview]
         }
         
-        // Deactivate all constraints
         NSLayoutConstraint.deactivate(removedSubviews.flatMap({ $0.constraints }))
         
-        // Remove the views from self
         removedSubviews.forEach({ $0.removeFromSuperview() })
     }
 }
