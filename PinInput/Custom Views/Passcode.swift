@@ -17,7 +17,6 @@ class Passcode: UIView, UITextInputTraits {
     var code: String = "" {
         didSet {
            updateStack(by: code)
-
         }
     }
     var maxLength = 4

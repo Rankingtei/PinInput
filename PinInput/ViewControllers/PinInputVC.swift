@@ -16,10 +16,9 @@ class PinInputVC: UIViewController, NumberPadDelegate {
             passcodeInput.passcode.code.removeLast()
         }
         else{
-        passcodeInput.passcode.code += number
-        print(passcodeInput.passcode.code)
+            passcodeInput.passcode.code += number
+            print(passcodeInput.passcode.code)
         }
-    
     }
     
     

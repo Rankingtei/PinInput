@@ -64,19 +64,35 @@
 		B32E078A28980D8C0045641C /* PinInput */ = {
 			isa = PBXGroup;
 			children = (
+				B3418F91289D742E008726AF /* Custom Views */,
+				B3418F90289D7409008726AF /* ViewControllers */,
 				B32E078B28980D8C0045641C /* AppDelegate.swift */,
 				B32E078D28980D8C0045641C /* SceneDelegate.swift */,
-				B32E078F28980D8C0045641C /* NumberPadVC.swift */,
-				B32E07A5289971CA0045641C /* Passcode.swift */,
-				B32E07A9289977ED0045641C /* Pin.swift */,
-				B32E07A72899738D0045641C /* PasscodeVC.swift */,
-				B32E07A1289943E90045641C /* PinInputVC.swift */,
-				B32E079F28980DDE0045641C /* NumberButton.swift */,
 				B32E079428980D940045641C /* Assets.xcassets */,
 				B32E079628980D940045641C /* LaunchScreen.storyboard */,
 				B32E079928980D940045641C /* Info.plist */,
 			);
 			path = PinInput;
+			sourceTree = "<group>";
+		};
+		B3418F90289D7409008726AF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B32E078F28980D8C0045641C /* NumberPadVC.swift */,
+				B32E07A72899738D0045641C /* PasscodeVC.swift */,
+				B32E07A1289943E90045641C /* PinInputVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B3418F91289D742E008726AF /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				B32E079F28980DDE0045641C /* NumberButton.swift */,
+				B32E07A9289977ED0045641C /* Pin.swift */,
+				B32E07A5289971CA0045641C /* Passcode.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
