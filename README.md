@@ -2,7 +2,7 @@
 
 A custom view for entering pin numbers
 
-Installation
+# Installation
 
 Xcode on MacOS
 
