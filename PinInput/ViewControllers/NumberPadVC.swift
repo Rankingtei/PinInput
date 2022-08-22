@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol NumberPadDelegate{
+protocol NumberPadVCDelegate{
     func onNumberSelected(number: String)
 }
 
 
 class NumberPadVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
-    var delegate: NumberPadDelegate?
+    var delegate: NumberPadVCDelegate?
     
     let numbers = ["1", "2", "3", "4", "5","6", "7", "8", "9", "", "0", "<"]
     let background = UIColor(red: 0.97, green: 0.95, blue: 0.94, alpha: 1.00)

@@ -8,7 +8,7 @@
 import UIKit
 
 
-class PinInputVC: UIViewController, NumberPadDelegate {
+class PinInputVC: UIViewController, NumberPadVCDelegate {
    
     func onNumberSelected(number: String) {
         
@@ -61,11 +61,11 @@ class PinInputVC: UIViewController, NumberPadDelegate {
         
         welcomeEmoji.image = UIImage(named: "waving-hand")
         
-        goodMorning.text = "Hi, Boo "
+        goodMorning.text = "Hi, there "
         goodMorning.textColor = UIColor(red: 0.25, green: 0.29, blue: 0.32, alpha: 1.00)
         goodMorning.font = .systemFont(ofSize: 24)
         
-        createPinPrompt.text = "Create your 4 digit pin"
+        createPinPrompt.text = "Enter your 4 digit pin"
         createPinPrompt.textColor = UIColor(red: 0.25, green: 0.29, blue: 0.32, alpha: 1.00)
         createPinPrompt.font = .systemFont(ofSize: 13)
         
